@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+namespace PlatformShoot
 {
-    // Start is called before the first frame update
-    void Start()
+  public class Bullet : MonoBehaviour
+  {
+    private void Start()
     {
-        
+      GameObject.Destroy(this.gameObject, 3f);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+      transform.Translate(12 * Time.deltaTime, 0, 0);
     }
+  }
 }
